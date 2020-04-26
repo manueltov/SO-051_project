@@ -27,21 +27,17 @@ struct request_d {
 
 //====================================================================================
 // estrutura onde são guardados os pedidos de operação do intermediario para a empresa
-// Alterar para um buffer circular. utilizar a estrutura pointers.
 struct request_r {
 	struct operation *buffer; // ponteiro para a lista de pedidos de operação
-	int *ptr;             // ponteiro para a lista de inteiros que indicam
-						  // se a posição respetiva está livre ou ocupada
+	struct pointers *ptr;             // ponteiro para a estrutura pointers
 };
 //====================================================================================
 
 //====================================================================================
 // estrutura onde a empresa disponibiliza os agendamentos
-// Alterar para um buffer circular. utilizar a estrutura pointers.
 struct response_s {
 	struct operation *buffer; // ponteiro para a lista de pedidos de operação
-	int *ptr;             // ponteiro para a lista de inteiros que indicam
-						  // se a posição respetiva está livre ou ocupada
+	struct pointers *ptr;             // ponteiro para a estrutura pointers
 };
 //====================================================================================
 

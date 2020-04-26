@@ -1,3 +1,8 @@
+# SO-051
+# Ivo Veiga, nº 44865
+# Joao Silva, nº 48782
+# Manuel Tovar, nº 49522
+
 CC = gcc
 SRC_DIR = src
 INC_DIR = include
@@ -48,10 +53,10 @@ $(OBJ_DIR)/intermediario.o: $(SRC_DIR)/intermediario.c $(MAIN) $(MEMORY)
 $(OBJ_DIR)/empresa.o: $(SRC_DIR)/empresa.c $(EMPRESA) $(MAIN) $(MEMORY) $(TIME)
 
 # FILE
-$(OBJ_DIR)/file.o: $(SRC_DIR)/file.c $(MAIN) $(SO) $(MEMORY) $(SCHEDULER) $(FILE) $(PRODCONS) $(TIME)
+$(OBJ_DIR)/file.o: $(SRC_DIR)/file.c $(MAIN) $(SO) $(MEMORY) $(SCHEDULER) $(FILE) $(PODCONS) $(TIME)
 
 # MEMORY
-$(OBJ_DIR)/memory.o: $(SRC_DIR)/memory.c $(MAIN) $(SO) $(MEMORY) $(PRODCONS) $(CONTROL) $(SCHEDULER) $(FILE) $(TIME)
+$(OBJ_DIR)/memory.o: $(SRC_DIR)/memory.c $(MAIN) $(SO) $(MEMORY) $(PODCONS) $(CONTROL) $(SCHEDULER) $(FILE) $(TIME)
 
 #ALL
 $(OBJ_DIR)/%.o:
@@ -62,7 +67,7 @@ clean:
 	find ./$(OBJ_DIR) -type f ! -name 'so.o' -delete
 
 testAll:
-	./bin/soadmpor ./tests/in/scenario1 ./tests/out/scenario1 -l ./tests/log/scenario1.log -t 1000
-	./bin/soadmpor ./tests/in/scenario2 ./tests/out/scenario2 -l ./tests/log/scenario2.log -t 1000
-	./bin/soadmpor ./tests/in/scenario3 ./tests/out/scenario3 -l ./tests/log/scenario3.log -t 1000
-	./bin/soadmpor ./tests/in/scenario4 ./tests/out/scenario4 -l ./tests/log/scenario4.log -t 1000
+	./bin/soadmpor ./tests/in/scenario1 ./tests/out/scenario1_stud -l ./tests/log/scenario1.log -t 1000
+	./bin/soadmpor ./tests/in/scenario2 ./tests/out/scenario2_stud -l ./tests/log/scenario2.log -t 1000
+	./bin/soadmpor ./tests/in/scenario3 ./tests/out/scenario3_stud -l ./tests/log/scenario3.log -t 1000
+	./bin/soadmpor ./tests/in/scenario4 ./tests/out/scenario4_stud -l ./tests/log/scenario4.log -t 1000

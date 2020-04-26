@@ -1,0 +1,440 @@
+Script started on 2020-04-26 12:52:41+0100
+]0;aluno-di@linux-di-fcul-1920: ~/Desktop/repositorios/pass_things/fase1_recebido/SO_AdmPor[01;32maluno-di@linux-di-fcul-1920[00m:[01;34m~/Desktop/repositorios/pass_things/fase1_recebido/SO__AdmPor[00m$ bin/example_5[C[C[C[C[C[C[C[C[Cmake[K
+gcc obj/main.o obj/cliente.o obj/control.o obj/empresa.o obj/prodcons.o obj/time.o obj/intermediario.o obj/scheduler.o obj/file.o obj/memory.o obj/so.o -o bin/soadmpor -lrt -lpthread
+]0;aluno-di@linux-di-fcul-1920: ~/Desktop/repositorios/pass_things/fase1_recebido/SO_AdmPor[01;32maluno-di@linux-di-fcul-1920[00m:[01;34m~/Desktop/repositorios/pass_things/fase1_recebido/SO__AdmPor[00m$ make clean
+rm -f bin/soadmpor
+find ./obj -type f ! -name 'so.o' -delete
+]0;aluno-di@linux-di-fcul-1920: ~/Desktop/repositorios/pass_things/fase1_recebido/SO_AdmPor[01;32maluno-di@linux-di-fcul-1920[00m:[01;34m~/Desktop/repositorios/pass_things/fase1_recebido/SO__AdmPor[00m$ make cleanall
+make: *** No rule to make target 'cleanall'.  Stop.
+]0;aluno-di@linux-di-fcul-1920: ~/Desktop/repositorios/pass_things/fase1_recebido/SO_AdmPor[01;32maluno-di@linux-di-fcul-1920[00m:[01;34m~/Desktop/repositorios/pass_things/fase1_recebido/SO__AdmPor[00m$ make cleanall[K
+rm -f bin/soadmpor
+find ./obj -type f ! -name 'so.o' -delete
+]0;aluno-di@linux-di-fcul-1920: ~/Desktop/repositorios/pass_things/fase1_recebido/SO_AdmPor[01;32maluno-di@linux-di-fcul-1920[00m:[01;34m~/Desktop/repositorios/pass_things/fase1_recebido/SO__AdmPor[00m$ make testAll 
+./bin/soadmpor ./tests/in/scenario1 ./tests/out/scenario1_stud -l ./tests/log/scenario1.log -t 1000
+make: ./bin/soadmpor: Command not found
+makefile:70: recipe for target 'testAll' failed
+make: *** [testAll] Error 127
+]0;aluno-di@linux-di-fcul-1920: ~/Desktop/repositorios/pass_things/fase1_recebido/SO_AdmPor[01;32maluno-di@linux-di-fcul-1920[00m:[01;34m~/Desktop/repositorios/pass_things/fase1_recebido/SO__AdmPor[00m$ make
+gcc -Wall -I include -c src/main.c -o obj/main.o
+gcc -Wall -I include -c src/cliente.c -o obj/cliente.o
+gcc -Wall -I include -c src/control.c -o obj/control.o
+gcc -Wall -I include -c src/empresa.c -o obj/empresa.o
+gcc -Wall -I include -c src/prodcons.c -o obj/prodcons.o
+gcc -Wall -I include -c src/time.c -o obj/time.o
+gcc -Wall -I include -c src/intermediario.c -o obj/intermediario.o
+gcc -Wall -I include -c src/scheduler.c -o obj/scheduler.o
+gcc -Wall -I include -c src/file.c -o obj/file.o
+gcc -Wall -I include -c src/memory.c -o obj/memory.o
+gcc obj/main.o obj/cliente.o obj/control.o obj/empresa.o obj/prodcons.o obj/time.o obj/intermediario.o obj/scheduler.o obj/file.o obj/memory.o obj/so.o -o bin/soadmpor -lrt -lpthread
+]0;aluno-di@linux-di-fcul-1920: ~/Desktop/repositorios/pass_things/fase1_recebido/SO_AdmPor[01;32maluno-di@linux-di-fcul-1920[00m:[01;34m~/Desktop/repositorios/pass_things/fase1_recebido/SO__AdmPor[00m$ make testAll 
+./bin/soadmpor ./tests/in/scenario1 ./tests/out/scenario1_stud -l ./tests/log/scenario1.log -t 1000
+
+------------------------------------------------------------------------
+----------------------------- SO_AdmPor ------------------------------
+------------------------------------------------------------------------
+
+			*** Open SO_AdmPor ***
+
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	02	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	02	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	02	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	02	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	01	02	03	04	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	01	02	03	04	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	01	02	03	04	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	01	02	03	04	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	01	02	03	04	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	02	03	04	05
+     CLIENTE 004 solicitou 4 e obteve 4 (v:00 c:00 t:-1587902132.538896322s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	02	03	04	05
+     CLIENTE 003 solicitou 3 e obteve 3 (v:00 c:00 t:0.023461002s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	02	03	04	05
+     CLIENTE 002 solicitou 2 e obteve 2 (v:00 c:00 t:0.022891570s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	02	03	04	05
+     CLIENTE 005 solicitou 5 e obteve 5 (v:00 c:00 t:0.025534739s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	02	03	04	05
+     CLIENTE 001 solicitou 1 e obteve 1 (v:00 c:00 t:0.028718505s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	02	03	04	05
+     CLIENTE 000 solicitou 0 e obteve 0 (v:00 c:00 t:0.029033420s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	02	03	04	05
+
+			*** Close SO_AdmPor ***
+
+------------------------------------------------------------------------
+
+			*** Statistics ***
+
+     Tempo total: 0.048143632s
+     Clientes: 06
+     Intermediarios: 01
+     Empresas: 01
+     Clientes servidos por intermediarios:	 06 = 06
+     Clientes servidos por empresas:		 06 = 06
+     Servicos de 00:				 01 01 01 01 01 01
+     Completados por 00:			 01 01 01 01 01 01 = 06
+     Total agendamentos:				 01 01 01 01 01 01 = 06
+     Capacidade inicial portuaria:		 01 02 03 04 05 06 = 21
+     Capacidade final portuaria:		 00 01 02 03 04 05 = 15
+
+			*******************
+./bin/soadmpor ./tests/in/scenario2 ./tests/out/scenario2_stud -l ./tests/log/scenario2.log -t 1000
+
+------------------------------------------------------------------------
+----------------------------- SO_AdmPor ------------------------------
+------------------------------------------------------------------------
+
+			*** Open SO_AdmPor ***
+
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	02	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	02	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	02	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	02	03	03	05	06
+     CLIENTE 003 solicitou 3 e obteve 3 (v:00 c:00 t:-1587902132.598193884s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	03	03	04	06
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 006 solicitou 0 mas nao estava disponivel!
+	Capacidade portuaria:	00	01	03	03	04	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	02	03	04	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	02	02	03	05
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 001 solicitou 1 e obteve 1 (v:00 c:00 t:0.011735992s)
+     CLIENTE 004 solicitou 4 e obteve 4 (v:00 c:00 t:0.006771178s)
+     CLIENTE 000 solicitou 0 e obteve 0 (v:00 c:00 t:0.012191724s)
+     CLIENTE 005 solicitou 5 e obteve 5 (v:00 c:00 t:0.006687486s)
+     CLIENTE 007 solicitou 1 e obteve 1 (v:00 c:00 t:0.004040634s)
+     CLIENTE 008 solicitou 2 e obteve 2 (v:00 c:00 t:0.004809184s)
+     CLIENTE 009 solicitou 3 e obteve 3 (v:00 c:00 t:0.008059630s)
+     CLIENTE 010 solicitou 4 e obteve 4 (v:00 c:00 t:0.008784435s)
+	Capacidade portuaria:	00	00	01	01	02	04
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	01	01	02	04
+     CLIENTE 016 solicitou 4 e obteve 4 (v:00 c:00 t:0.008809935s)
+     CLIENTE 015 solicitou 3 e obteve 3 (v:00 c:00 t:0.008934736s)
+     CLIENTE 013 solicitou 1 mas nao estava disponivel!
+     CLIENTE 012 solicitou 0 mas nao estava disponivel!
+     CLIENTE 017 solicitou 5 e obteve 5 (v:00 c:00 t:0.006944677s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	01	02	04
+     CLIENTE 002 solicitou 2 e obteve 2 (v:00 c:00 t:0.039595464s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	01	02	03
+     CLIENTE 014 solicitou 2 e obteve 2 (v:00 c:00 t:0.005917157s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	01	02	03
+     CLIENTE 011 solicitou 5 e obteve 5 (v:00 c:00 t:0.003438667s)
+
+			*** Close SO_AdmPor ***
+
+------------------------------------------------------------------------
+
+			*** Statistics ***
+
+     Tempo total: 0.048891358s
+     Clientes: 18
+     Intermediarios: 01
+     Empresas: 01
+     Clientes servidos por intermediarios:	 18 = 18
+     Clientes servidos por empresas:		 15 = 15
+     Servicos de 00:				 01 01 01 01 01 01
+     Completados por 00:			 01 02 03 03 03 03 = 15
+     Total agendamentos:				 01 02 03 03 03 03 = 15
+     Capacidade inicial portuaria:		 01 02 03 04 05 06 = 21
+     Capacidade final portuaria:		 00 00 00 01 02 03 = 06
+
+			*******************
+./bin/soadmpor ./tests/in/scenario3 ./tests/out/scenario3_stud -l ./tests/log/scenario3.log -t 1000
+
+------------------------------------------------------------------------
+----------------------------- SO_AdmPor ------------------------------
+------------------------------------------------------------------------
+
+			*** Open SO_AdmPor ***
+
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	02	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	01	02	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	03	04	05	06
+     CLIENTE 000 solicitou 0 e obteve 0 (v:00 c:00 t:-1587902132.722090960s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 001 solicitou 1 e obteve 1 (v:00 c:00 t:0.003744502s)
+	Capacidade portuaria:	00	01	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	03	04	05	06
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 003 solicitou 3 e obteve 3 (v:00 c:00 t:-0.030014561s)
+     CLIENTE 002 solicitou 2 e obteve 2 (v:00 c:00 t:0.003300767s)
+     CLIENTE 007 solicitou 1 e obteve 1 (v:00 c:00 t:0.008594499s)
+     CLIENTE 008 solicitou 2 mas nao estava disponivel!
+     CLIENTE 010 solicitou 4 e obteve 4 (v:00 c:00 t:0.009560133s)
+     CLIENTE 006 solicitou 0 e obteve 0 (v:00 c:00 t:0.005195034s)
+     CLIENTE 009 solicitou 3 e obteve 3 (v:00 c:00 t:0.007653793s)
+	Capacidade portuaria:	00	00	01	02	03	04
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 005 solicitou 5 e obteve 5 (v:00 c:00 t:0.012224523s)
+	Capacidade portuaria:	00	00	01	02	03	04
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	01	02	03	04
+     CLIENTE 004 solicitou 4 e obteve 4 (v:00 c:00 t:0.008146454s)
+     CLIENTE 011 solicitou 5 e obteve 5 (v:00 c:00 t:0.016246481s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	01	02	03	04
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	01	01	03	04
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	01	01	03	04
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	01	02	03
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	01	02	03
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	01	02	03
+     CLIENTE 015 solicitou 3 e obteve 3 (v:00 c:00 t:0.009118324s)
+     CLIENTE 016 solicitou 4 e obteve 4 (v:00 c:00 t:0.006336983s)
+     CLIENTE 017 solicitou 5 mas nao estava disponivel!
+     CLIENTE 014 solicitou 2 e obteve 2 (v:00 c:00 t:0.006247649s)
+     CLIENTE 013 solicitou 1 e obteve 1 (v:00 c:00 t:0.001794994s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	01	02	03
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	01	02	03
+     CLIENTE 012 solicitou 0 mas nao estava disponivel!
+
+			*** Close SO_AdmPor ***
+
+------------------------------------------------------------------------
+
+			*** Statistics ***
+
+     Tempo total: 0.100770533s
+     Clientes: 18
+     Intermediarios: 02
+     Empresas: 02
+     Clientes servidos por intermediarios:	 12 06 = 18
+     Clientes servidos por empresas:		 01 14 = 15
+     Servicos de 00:				 01 01 01 01 01 01
+     Completados por 00:			 00 00 00 01 00 00 = 01
+     Servicos de 01:				 01 01 01 01 01 01
+     Completados por 01:			 01 02 03 02 03 03 = 14
+     Total agendamentos:				 02 03 02 03 03 02 = 15
+     Capacidade inicial portuaria:		 01 02 03 04 05 06 = 21
+     Capacidade final portuaria:		 00 00 00 01 02 03 = 06
+
+			*******************
+./bin/soadmpor ./tests/in/scenario4 ./tests/out/scenario4_stud -l ./tests/log/scenario4.log -t 1000
+
+------------------------------------------------------------------------
+----------------------------- SO_AdmPor ------------------------------
+------------------------------------------------------------------------
+
+			*** Open SO_AdmPor ***
+
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	09	11	08	14	15	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	09	11	08	14	15	06
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	09	11	07	13	14	05
+     CLIENTE 000 solicitou 0 e obteve 0 (v:00 c:00 t:-1587902132.836890459s)
+     CLIENTE 001 solicitou 1 e obteve 1 (v:00 c:00 t:0.008177352s)
+     CLIENTE 002 solicitou 2 e obteve 2 (v:00 c:00 t:0.001638713s)
+     CLIENTE 003 solicitou 3 e obteve 3 (v:00 c:00 t:0.004005865s)
+     CLIENTE 004 solicitou 4 e obteve 4 (v:00 c:00 t:0.003384528s)
+     CLIENTE 005 solicitou 5 e obteve 5 (v:00 c:00 t:0.004688275s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	09	11	07	12	13	05
+     CLIENTE 007 solicitou 3 e obteve 3 (v:00 c:00 t:0.003523289s)
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 006 solicitou 4 e obteve 4 (v:00 c:00 t:0.003831347s)
+	Capacidade portuaria:	09	11	07	12	13	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	09	11	07	12	13	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	09	11	07	12	13	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	09	10	06	12	13	05
+     CLIENTE 009 solicitou 1 e obteve 1 (v:00 c:00 t:-0.006133501s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	09	10	06	12	13	05
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 008 solicitou 2 e obteve 2 (v:00 c:00 t:0.000990598s)
+     CLIENTE 010 solicitou 0 e obteve 0 (v:00 c:00 t:-0.006634578s)
+	Capacidade portuaria:	08	09	06	12	13	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	08	09	06	12	13	05
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	07	09	06	12	13	05
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 012 solicitou 1 e obteve 1 (v:00 c:00 t:0.001409807s)
+     CLIENTE 011 solicitou 0 e obteve 0 (v:00 c:00 t:-0.003448012s)
+     CLIENTE 017 solicitou 4 e obteve 4 (v:00 c:00 t:-0.003662899s)
+     CLIENTE 016 solicitou 5 e obteve 5 (v:00 c:00 t:0.000748944s)
+     CLIENTE 015 solicitou 4 e obteve 4 (v:00 c:00 t:0.005391794s)
+     CLIENTE 018 solicitou 3 e obteve 3 (v:00 c:00 t:0.007109706s)
+	Capacidade portuaria:	05	07	04	10	11	04
+     CLIENTE 019 solicitou 2 e obteve 2 (v:00 c:00 t:0.006289514s)
+     CLIENTE 014 solicitou 3 e obteve 3 (v:00 c:00 t:0.013742276s)
+     CLIENTE 021 solicitou 0 e obteve 0 (v:00 c:00 t:0.013192946s)
+     CLIENTE 020 solicitou 1 e obteve 1 (v:00 c:00 t:0.013363340s)
+     CLIENTE 013 solicitou 2 e obteve 2 (v:00 c:00 t:0.009579931s)
+     CLIENTE 022 solicitou 0 e obteve 0 (v:00 c:00 t:0.009839475s)
+     CLIENTE 023 solicitou 1 e obteve 1 (v:00 c:00 t:0.007330262s)
+     CLIENTE 025 solicitou 3 e obteve 3 (v:00 c:00 t:0.008335196s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	05	07	03	09	10	03
+     CLIENTE 024 solicitou 2 e obteve 2 (v:00 c:00 t:0.008560256s)
+     CLIENTE 026 solicitou 4 e obteve 4 (v:00 c:00 t:0.004455736s)
+     CLIENTE 027 solicitou 5 e obteve 5 (v:00 c:00 t:0.006328373s)
+     CLIENTE 031 solicitou 1 e obteve 1 (v:00 c:00 t:-0.003060242s)
+     CLIENTE 030 solicitou 2 e obteve 2 (v:00 c:00 t:0.001047568s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	03	06	02	08	10	03
+     CLIENTE 032 solicitou 0 e obteve 0 (v:00 c:00 t:0.004262751s)
+     CLIENTE 033 solicitou 0 e obteve 0 (v:00 c:00 t:0.004372787s)
+     CLIENTE 029 solicitou 3 e obteve 3 (v:00 c:00 t:0.000970075s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	03	06	02	08	09	03
+     CLIENTE 028 solicitou 4 e obteve 4 (v:00 c:00 t:-0.000459539s)
+     CLIENTE 040 solicitou 3 e obteve 3 (v:00 c:00 t:0.000397063s)
+     CLIENTE 035 solicitou 2 e obteve 2 (v:00 c:00 t:0.001204602s)
+     CLIENTE 041 solicitou 2 e obteve 2 (v:00 c:00 t:0.001133209s)
+     CLIENTE 039 solicitou 4 e obteve 4 (v:00 c:00 t:0.003020839s)
+     CLIENTE 038 solicitou 5 e obteve 5 (v:00 c:00 t:0.007609082s)
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 042 solicitou 1 e obteve 1 (v:00 c:00 t:0.003833852s)
+     CLIENTE 034 solicitou 1 e obteve 1 (v:00 c:00 t:0.007514026s)
+     CLIENTE 043 solicitou 0 e obteve 0 (v:00 c:00 t:0.008572972s)
+     CLIENTE 037 solicitou 4 e obteve 4 (v:00 c:00 t:0.008127085s)
+     CLIENTE 036 solicitou 3 e obteve 3 (v:00 c:00 t:0.004829617s)
+	Capacidade portuaria:	02	04	00	06	07	02
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	02	04	00	06	07	02
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	02	04	00	04	05	01
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	02	04	00	04	05	01
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 049 solicitou 5 e obteve 5 (v:00 c:00 t:-0.005589890s)
+     CLIENTE 048 solicitou 4 mas nao estava disponivel!
+     CLIENTE 046 solicitou 2 e obteve 2 (v:00 c:00 t:0.001305812s)
+     CLIENTE 050 solicitou 4 e obteve 4 (v:00 c:00 t:0.002350468s)
+     CLIENTE 055 solicitou 0 mas nao estava disponivel!
+     CLIENTE 057 solicitou 2 mas nao estava disponivel!
+     CLIENTE 047 solicitou 3 e obteve 3 (v:00 c:00 t:0.003692609s)
+     CLIENTE 051 solicitou 3 e obteve 3 (v:00 c:00 t:0.011387031s)
+     CLIENTE 045 solicitou 1 e obteve 1 (v:00 c:00 t:0.011659528s)
+     CLIENTE 054 solicitou 0 e obteve 0 (v:00 c:00 t:0.009661944s)
+     CLIENTE 044 solicitou 0 e obteve 0 (v:00 c:00 t:0.001850685s)
+     CLIENTE 052 solicitou 2 mas nao estava disponivel!
+     CLIENTE 056 solicitou 1 e obteve 1 (v:00 c:00 t:0.009948878s)
+     CLIENTE 053 solicitou 1 e obteve 1 (v:00 c:00 t:0.009868578s)
+     CLIENTE 058 solicitou 3 e obteve 3 (v:00 c:00 t:0.006916981s)
+	Capacidade portuaria:	00	01	00	03	05	01
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	00	03	05	01
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	01	00	03	05	01
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 063 solicitou 2 mas nao estava disponivel!
+     CLIENTE 065 solicitou 0 mas nao estava disponivel!
+     CLIENTE 066 solicitou 0 mas nao estava disponivel!
+     CLIENTE 067 solicitou 1 mas nao estava disponivel!
+     CLIENTE 064 solicitou 1 e obteve 1 (v:00 c:00 t:0.001226539s)
+     CLIENTE 062 solicitou 3 e obteve 3 (v:00 c:00 t:0.001075825s)
+     CLIENTE 070 solicitou 4 e obteve 4 (v:00 c:00 t:0.006187207s)
+     CLIENTE 068 solicitou 2 mas nao estava disponivel!
+     CLIENTE 061 solicitou 4 e obteve 4 (v:00 c:00 t:0.001547642s)
+     CLIENTE 071 solicitou 5 mas nao estava disponivel!
+     CLIENTE 060 solicitou 5 e obteve 5 (v:00 c:00 t:0.001566487s)
+     CLIENTE 074 solicitou 2 mas nao estava disponivel!
+     CLIENTE 073 solicitou 3 mas nao estava disponivel!
+     CLIENTE 076 solicitou 0 mas nao estava disponivel!
+     CLIENTE 075 solicitou 1 mas nao estava disponivel!
+     CLIENTE 077 solicitou 0 mas nao estava disponivel!
+     CLIENTE 079 solicitou 2 e obteve 2 (v:00 c:00 t:0.006794964s)
+     CLIENTE 078 solicitou 1 mas nao estava disponivel!
+	Capacidade portuaria:	00	00	00	00	01	00
+     CLIENTE 069 solicitou 3 e obteve 3 (v:00 c:00 t:0.009234457s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	00	01	00
+     CLIENTE 072 solicitou 4 e obteve 4 (v:00 c:00 t:0.011725436s)
+	Operacoes:		00	01	02	03	04	05
+     CLIENTE 059 solicitou 4 e obteve 4 (v:00 c:00 t:0.008098252s)
+	Capacidade portuaria:	00	00	00	00	01	00
+     CLIENTE 084 solicitou 3 mas nao estava disponivel!
+     CLIENTE 085 solicitou 2 mas nao estava disponivel!
+     CLIENTE 086 solicitou 1 mas nao estava disponivel!
+     CLIENTE 083 solicitou 4 e obteve 4 (v:00 c:00 t:0.000591967s)
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	00	00	00
+     CLIENTE 082 solicitou 5 mas nao estava disponivel!
+     CLIENTE 087 solicitou 0 mas nao estava disponivel!
+     CLIENTE 081 solicitou 4 mas nao estava disponivel!
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	00	00	00
+	Operacoes:		00	01	02	03	04	05
+	Capacidade portuaria:	00	00	00	00	00	00
+     CLIENTE 080 solicitou 3 mas nao estava disponivel!
+
+			*** Close SO_AdmPor ***
+
+------------------------------------------------------------------------
+
+			*** Statistics ***
+
+     Tempo total: 0.167115082s
+     Clientes: 88
+     Intermediarios: 02
+     Empresas: 03
+     Clientes servidos por intermediarios:	 31 57 = 88
+     Clientes servidos por empresas:		 10 20 35 = 65
+     Servicos de 00:				 01 00 00 00 00 00
+     Completados por 00:			 05 03 01 00 01 00 = 10
+     Servicos de 01:				 00 01 01 00 00 00
+     Completados por 01:			 02 06 04 06 01 01 = 20
+     Servicos de 02:				 00 00 00 01 01 01
+     Completados por 02:			 03 03 03 08 13 05 = 35
+     Total agendamentos:				 10 12 10 13 14 06 = 65
+     Capacidade inicial portuaria:		 10 12 08 14 15 06 = 65
+     Capacidade final portuaria:		 00 00 00 00 00 00 = 00
+
+			*******************
+]0;aluno-di@linux-di-fcul-1920: ~/Desktop/repositorios/pass_things/fase1_recebido/SO_AdmPor[01;32maluno-di@linux-di-fcul-1920[00m:[01;34m~/Desktop/repositorios/pass_things/fase1_recebido/SO__AdmPor[00m$ [K[A]0;aluno-di@linux-di-fcul-1920: ~/Desktop/repositorios/pass_things/fase1_recebido/SO_AdmPor[01;32maluno-di@linux-di-fcul-1920[00m:[01;34m~/Desktop/repositorios/pass_things/fase1_recebido/SO_AdmPor[00m$ exit

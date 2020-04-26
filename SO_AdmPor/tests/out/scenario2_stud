@@ -1,0 +1,26 @@
+     CLIENTE 003 solicitou 3 e obteve 3
+     CLIENTE 006 solicitou 0 mas nao estava disponivel!
+     CLIENTE 001 solicitou 1 e obteve 1
+     CLIENTE 004 solicitou 4 e obteve 4
+     CLIENTE 000 solicitou 0 e obteve 0
+     CLIENTE 005 solicitou 5 e obteve 5
+     CLIENTE 008 solicitou 2 e obteve 2
+     CLIENTE 007 solicitou 1 e obteve 1
+     CLIENTE 009 solicitou 3 e obteve 3
+     CLIENTE 010 solicitou 4 e obteve 4
+     CLIENTE 016 solicitou 4 e obteve 4
+     CLIENTE 015 solicitou 3 e obteve 3
+     CLIENTE 013 solicitou 1 mas nao estava disponivel!
+     CLIENTE 012 solicitou 0 mas nao estava disponivel!
+     CLIENTE 017 solicitou 5 e obteve 5
+     CLIENTE 002 solicitou 2 e obteve 2
+     CLIENTE 014 solicitou 2 e obteve 2
+     CLIENTE 011 solicitou 5 e obteve 5
+     Clientes: 18
+     Intermediarios: 01
+     Empresas: 01
+     Clientes servidos por intermediarios:	 18
+     Clientes servidos por empresas:		 15
+     Total agendamentos:				 01 02 03 03 03 03 = 15
+     Capacidade inicial portuaria:		 01 02 03 04 05 06 = 21
+     Capacidade final portuaria:		 00 00 00 01 02 03 = 06
