@@ -22,6 +22,7 @@
 #include "so.h"
 
 extern struct configuration Config;
+extern struct statistics Ind;
 
 int cliente_executar(int id) {
 	
@@ -38,7 +39,62 @@ int cliente_executar(int id) {
 	// - modificar mensagem impressa para ficar igual à de
 	// soadmpor e para usar dados vindos de operacao 
 	//
-	return so_cliente_operations(id);
+
+	//return so_cliente_operations(id);
+
+	int n, count, ret;
+	struct operation operacao;
+	int operation_id;
+	char buf[500];
+	char *result;
+
+	setbuf(stdout, NULL);
+
+	n = 0;
+	count = 0;
+	result = Config.list_clientes;
+	while (n < id) {
+		while (Config.list_clientes[count++] != '\0')
+			;
+		result = &Config.list_clientes[count];
+		n++;
+	}
+
+	operation_id = atoi(result);
+	operacao.id = operation_id;
+	operacao.cliente = id;
+
+    for (int i = 0; i < Config.N; i++){
+
+		memory_request_d_write(id, &operacao);
+	    memory_response_s_read(id, &operacao);
+
+    	if (operacao.disponibilidade == 1) {
+			double time_diff = time_difference(operacao.time_descricao, operacao.time_agendamento);
+
+			Ind.tempos[id + i].cliente = operacao.cliente;
+		    Ind.tempos[id + i].time = time_diff;
+
+			sprintf(buf, "     CLIENTE %03d solicitou %d a intermediario %03d e foi servido por empresa %03d (tempo: %.9fs)\n",
+		    		operacao.cliente, operacao.id, operacao.intermediario, operacao.empresa, time_diff);
+	    	printf("     CLIENTE %03d solicitou %d a intermediario %03d e foi servido por empresa %03d (tempo: %.9fs)\n",
+		    		operacao.cliente, operacao.id, operacao.intermediario, operacao.empresa, time_diff);
+	    	
+	    	ret = operacao.id;
+	    } else {
+			sprintf(buf, "     CLIENTE %03d solicitou %d mas nao estava disponivel!\n", operacao.cliente, operacao.id);
+	    	printf("     CLIENTE %03d solicitou %d mas nao estava disponivel!\n", operacao.cliente, operacao.id);
+	    	
+		    ret = Config.OPERATIONS;
+	    }
+        
+    	file_write_line(buf);
+
+		usleep(1000);
+	}
+	
+	return ret;
+
 	//==============================================
 }
 
