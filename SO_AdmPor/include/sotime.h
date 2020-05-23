@@ -9,5 +9,8 @@ double time_difference(struct timespec, struct timespec);
 double time_untilnow();
 void time_register(struct timespec *);
 void time_processing_order();
+float time_average_statistic(int id);
+float time_minimum_statistic(int id);
+float time_maximum_statistic(int id);
 
 #endif

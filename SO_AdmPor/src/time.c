@@ -111,9 +111,46 @@ void time_register(struct timespec *t) {
 
 void time_processing_order() {
 	//==============================================
-	// ADORMECER POR 1 MILISEGUNDO
+	// ADORMECER UM NUMERO ALEATORIO DE SEGUNDOS
+	// MAXIMO DE 100 MILISEGUNDOS E MINIMO 1 MILISEGUNDO
 	//
-	// usar usleep
+	// usar funcoes usleep, rand e % (resto divisao inteira)
 	so_time_processing_order();
+	//==============================================
+}
+
+float time_average_statistic(int id) {
+	//==============================================================
+	// CALCULAR MEDIA DOS TEMPOS DOS PEDIDOS DO CLIENTE
+	//
+	// percorrer Ind.tempos com duplo for, usando Config.CLIENTES
+	// e Config.N para indexar, ver quais os tempos do cliente id e
+	// fazer a media dos que são != 0. Se o cliente não tiver tempos,
+	// devolver 0.
+	return so_time_average_statistic(id);
+	//==============================================
+}
+
+float time_minimum_statistic(int id) {
+	//==============================================================
+	// CALCULAR MINIMO DOS TEMPOS DOS PEDIDOS DO CLIENTE
+	//
+	// percorrer Ind.tempos com duplo for, usando Config.CLIENTES
+	// e Config.N para indexar, ver quais os tempos do cliente id e
+	// fazer o minimo dos que são != 0. Se o cliente não tiver tempos,
+	// devolver 0.
+	return so_time_minimum_statistic(id);
+	//==============================================
+}
+
+float time_maximum_statistic(int id) {
+	//==============================================================
+	// CALCULAR MAXIMO DO TEMPO DOS PEDIDOS DO CLIENTE
+	//
+	// percorrer Ind.tempos com duplo for, usando Config.CLIENTES
+	// e Config.N para indexar, ver quais os tempos do cliente id e
+	// fazer o maximo dos que são != 0. Se o cliente não tiver tempos,
+	// devolver 0.
+	return so_time_maximum_statistic(id);
 	//==============================================
 }
