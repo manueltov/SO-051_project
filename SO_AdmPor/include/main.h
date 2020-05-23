@@ -32,6 +32,11 @@ struct configuration {
 	int* capacidade_portuaria;      // vetor com capacidade por tipo de operação
 };
 
+struct op_time {
+	int cliente;
+	float time;
+};
+
 // estrutura de registo de indicadores de funcionamento do SO_AdmPor
 struct statistics {
 	int *capacidade_inicial_portuaria;
@@ -42,6 +47,7 @@ struct statistics {
 	int *clientes_servidos_por_empresas;
 	int *agendamentos_entregues_por_empresas;
 	int *servicos_recebidos_por_clientes;
+	struct op_time *tempos;
 };
 
 #endif

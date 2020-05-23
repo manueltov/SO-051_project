@@ -144,5 +144,13 @@ double so_time_difference(struct timespec, struct timespec);
 double so_time_untilnow();
 void so_time_register(struct timespec *);
 void so_time_processing_order();
+float so_time_average_statistic(int id);
+float so_time_minimum_statistic(int id);
+float so_time_maximum_statistic(int id);
+//***********************************
+// CLIENTE
+//
+int so_cliente_operations(int id);
+
 
 #endif
